@@ -12,9 +12,12 @@ const PageContainer = styled.div`
   background-image: url('https://ireland.apollo.olxcdn.com/v1/files/0iq0gb9ppip8-UA/image;s=1000x700');
   background-repeat: no-repeat;
 `;
+
 const Text = styled.h1`
   margin-left: 20px;
 `;
+
+const LiText = styled.li``;
 
 const Home = () => {
   const [trendingMovies, setTrendingMovies] = useState([]);
@@ -41,9 +44,9 @@ const Home = () => {
 
       <ul>
         {trendingMovies.map(movie => (
-          <li key={movie.id}>
+          <LiText key={movie.id}>
             <Link to={`/movies/${movie.id}`}>{movie.title}</Link>
-          </li>
+          </LiText>
         ))}
       </ul>
     </PageContainer>
